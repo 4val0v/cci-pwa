@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bitcoin",
+    "symbol": "BTC",
+    "title": "Bitcoin",
+    "amount": 0
+  },
+  {
+    "id": "lisk",
+    "symbol": "LSK",
+    "title": "Lisk",
+    "amount": 5.0076
+  },
+  {
+    "id": "waves",
+    "symbol": "WAVES",
+    "title": "Waves",
+    "amount": 15.6547
+  },
+  {
+    "id": "vericoin",
+    "symbol": "VRC",
+    "title": "Vericoin",
+    "amount": 43.1049
+  },
+  {
+    "id": "veriumreserve",
+    "symbol": "VRM",
+    "title": "VeriumReserve",
+    "amount": 27.3596
+  },
+  {
+    "id": "ripple",
+    "symbol": "XRP",
+    "title": "Ripple",
+    "amount": 57.7515
+  },
+  {
+    "id": "data",
+    "symbol": "DTA",
+    "title": "DATA",
+    "amount": 20
+  },
+  {
+    "id": "havven",
+    "symbol": "HAV",
+    "title": "Havven",
+    "amount": 18.8780
+  },
+  {
+    "id": "ucash",
+    "symbol": "UCASH",
+    "title": "U.CASH",
+    "amount": 278.7987
+  }
+]

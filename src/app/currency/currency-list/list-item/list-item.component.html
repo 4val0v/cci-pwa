@@ -1,0 +1,26 @@
+<mat-list-item>
+  <img matListAvatar src="/assets/images/{{ currency.id }}.png" [alt]="currency.title">
+  <h4 matLine>{{ currency.title }} <span>({{ currency.symbol }})</span></h4>
+
+  <div matLine *ngIf="currencyInfo | async as info; then currencyInfoBlock else fetchingInfo"></div>
+
+  <ng-template #currencyInfoBlock let-info>
+    <p matLine *ngIf="info == -1; else currencyInfoData" class="red">fetching error</p>
+
+    <ng-template #currencyInfoData>
+        <p>
+          USD - <b>${{ info.price_usd | number:'1.2-4' }}</b>
+          <span [class.green]="+info.percent_change_24h > 0" [class.red]="+info.percent_change_24h < 0">({{ info.percent_change_24h }}%)</span>
+        </p>
+
+        <p>
+          SUM - <b>${{ +info.price_usd * currency.amount | number:'1.2-4' }}</b>
+          <span>({{ currency.amount }} {{ currency.symbol }})</span>
+        </p>
+    </ng-template>
+  </ng-template>
+
+  <ng-template #fetchingInfo>
+    <p>fetching info...</p>
+  </ng-template>
+</mat-list-item>
