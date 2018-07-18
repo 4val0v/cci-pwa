@@ -1,0 +1,102 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.e9df7b3f06b638fd4686.js",
+        "/polyfills.2f4a59095805af02bd79.js",
+        "/runtime.a66f828dca56eeb90e02.js",
+        "/styles.f19ad2995dd6da220af7.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/data.json",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/bitcoin.png",
+        "/assets/images/data.png",
+        "/assets/images/havven.png",
+        "/assets/images/lisk.png",
+        "/assets/images/ripple.png",
+        "/assets/images/ucash.png",
+        "/assets/images/vericoin.png",
+        "/assets/images/veriumreserve.png",
+        "/assets/images/waves.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-performance",
+      "patterns": [
+        "https:\\/\\/api\\.coinmarketcap\\.com\\/v1\\/ticker\\/(?:.+\\/)?"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/data.json": "471a38a22d57148af52f898350b7478a09a9fd75",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/images/bitcoin.png": "b048a094372cee2e645e23513bc1ba1367dc9a6f",
+    "/assets/images/data.png": "5d7d46aa7e0db19d53681674981b6f73b8db219f",
+    "/assets/images/havven.png": "e563fe2d165f3ed461ad434f75051f1717451eaf",
+    "/assets/images/lisk.png": "be5e4f08772f9f9e9d8faa94b0188219725eccd4",
+    "/assets/images/ripple.png": "6dbedf271d2189ffc2456a66481ea4b5a15644e3",
+    "/assets/images/ucash.png": "956fe7a9a3d6b9194d980e993614f8fe724a2b13",
+    "/assets/images/vericoin.png": "e8476dc98140b0b3c067a633e5a2f190b1e4142f",
+    "/assets/images/veriumreserve.png": "822a9bf5f42a9bd74c0f085f98591734bd87f00e",
+    "/assets/images/waves.png": "f8b7d5016d346badf4ca58ce29731784504adcae",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "4d061dd80c74fb7181d0b01017b33904b4416195",
+    "/main.e9df7b3f06b638fd4686.js": "bdbfdd24dda1e270858ef4ca9f42db73b25b9d6e",
+    "/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/styles.f19ad2995dd6da220af7.css": "154f2379156d5ff88fab9beacebb0429c73bcc90"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
+}
