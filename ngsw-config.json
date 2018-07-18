@@ -23,9 +23,9 @@
   }],
   "dataGroups": [ {
     "name": "api-performance",
-    "urls": ["https://api.coinmarketcap.com/v1/ticker/**/"],
+    "urls": ["/ticker"],
     "cacheConfig": {
-      "strategy": "performance",
+      "strategy": "freshness",
       "maxSize": 100,
       "maxAge": "3d"
     }
