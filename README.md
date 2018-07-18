@@ -7,7 +7,7 @@ Angular 6 + Angular Material
 
 ## Demo
 
-https://ifynk.github.io/cci-pwa/
+https://ifynk.github.io
 
 ## Development server
 
