@@ -20,5 +20,14 @@
         "/assets/**"
       ]
     }
+  }],
+  "dataGroups": [ {
+    "name": "api-performance",
+    "urls": ["https://api.coinmarketcap.com/v1/ticker/**/"],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "3d"
+    }
   }]
 }

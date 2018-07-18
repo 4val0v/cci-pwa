@@ -1,9 +1,4 @@
 <mat-list>
-  <mat-list-item>
-    <h3 matLine>Total</h3>
-    <p matLine>USD - <b>${{ totalSumm | async | number: '1.4-4' }}</b></p>
-  </mat-list-item>
-
   <ng-container *ngFor="let currency of currencyList | async; last as last">
     <app-list-item [currency]="currency"></app-list-item>
     <mat-divider [inset]="true" *ngIf="!last"></mat-divider>

@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
-  <span>CcInformer</span>
+  <span>${{ totalAmount | async | number: '1.4-4' }}</span>
+  <button (click)="refreshCurrencies()" mat-raised-button>Refresh</button>
 </mat-toolbar>
 
 <app-currency-list></app-currency-list>

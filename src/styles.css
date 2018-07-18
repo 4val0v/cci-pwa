@@ -17,6 +17,10 @@ body {
   color: #ef7979;
 }
 
+.mat-toolbar {
+  justify-content: space-between;
+}
+
 .mat-list .mat-list-item .mat-list-item-content .mat-list-text > p {
   font-size: .75rem;
 }

@@ -10,7 +10,6 @@ import { CurrencyService } from '../shared/currency.service';
 })
 export class CurrencyListComponent implements OnInit {
   currencyList: Observable<CurrencyListItem[]>;
-  totalSumm = this.currencyService.totalSum;
 
   constructor(private currencyService: CurrencyService) { }
 

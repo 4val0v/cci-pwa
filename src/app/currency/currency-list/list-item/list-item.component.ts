@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
+import { RefresherService } from '../../../core/refresher.service';
+import { TotalAmountService } from '../../../core/total-amount.service';
 import { CurrencyService } from '../../shared/currency.service';
 import { CurrencyInfo, CurrencyListItem } from './../../shared/currency.model';
 
@@ -13,27 +15,31 @@ export class ListItemComponent implements OnInit {
 
   currencyInfo = new Subject<CurrencyInfo | -1>();
 
-  constructor(private currencyService: CurrencyService) { }
+  constructor(
+    private currencyService: CurrencyService,
+    private refresher: RefresherService,
+    private totalAmountService: TotalAmountService
+  ) { }
 
   ngOnInit() {
-    this.fetchCurrencyInfo();
-    this.reloadCurrencyList();
+    this.fetchCurrencyInfo$();
+    this.refreshCurrencyList$();
   }
 
-  private reloadCurrencyList() {
-    this.currencyService.reloadCurrencyList
+  private refreshCurrencyList$() {
+    this.refresher.refreshCurrencyList()
       .subscribe(() => {
         this.currencyInfo.next(null);
-        this.fetchCurrencyInfo();
+        this.fetchCurrencyInfo$();
       });
   }
 
-  private fetchCurrencyInfo() {
+  private fetchCurrencyInfo$() {
     this.currencyService.fetchCurrencyInfo(this.currency.id)
       .subscribe(
         (info: CurrencyInfo) => {
           this.currencyInfo.next(info);
-          this.currencyService.addSumToTotal(+info.price_usd * this.currency.amount);
+          this.totalAmountService.addAmountToTotal(+info.price_usd * this.currency.amount);
         },
         () => {
           this.currencyInfo.next(-1);
