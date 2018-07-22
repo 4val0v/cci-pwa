@@ -27,7 +27,7 @@ export class ListItemComponent implements OnInit {
   }
 
   private refreshCurrencyList$() {
-    this.refresher.refreshCurrencyList()
+    this.refresher.refresh()
       .subscribe(() => {
         this.currencyInfo.next(null);
         this.fetchCurrencyInfo$();
