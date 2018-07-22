@@ -7,7 +7,7 @@ Angular 6 + Angular Material
 
 ## Demo
 
-https://ifynk.github.io
+http://pwa.ifynk.in.ua/
 
 ## Development server
 
