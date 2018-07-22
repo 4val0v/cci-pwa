@@ -26,7 +26,7 @@ export class TotalAmountService {
   }
 
   private resetTotalAmount$() {
-    this.refresher.refreshCurrencyList()
+    this.refresher.refresh()
       .subscribe(() => {
         this.totalAmountSubject.next(0);
       });

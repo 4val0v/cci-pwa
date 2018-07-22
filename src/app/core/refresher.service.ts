@@ -1,14 +1,21 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { share } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RefresherService {
-  private refreshList = new EventEmitter();
+  private refreshListSubject = new Subject();
 
-  constructor() { }
+  refresh() {
+    return this.refreshListSubject.asObservable()
+      .pipe(
+        share()
+      );
+  }
 
-  refreshCurrencyList() {
-    return this.refreshList;
+  startRefresh() {
+    return this.refreshListSubject.next();
   }
 }

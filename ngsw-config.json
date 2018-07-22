@@ -22,12 +22,12 @@
     }
   }],
   "dataGroups": [ {
-    "name": "api-performance",
+    "name": "coinmarketcap-api",
     "urls": ["/ticker"],
     "cacheConfig": {
       "strategy": "freshness",
-      "maxSize": 100,
-      "maxAge": "3d"
+      "timeout": "5s",
+      "maxAge": "10m"
     }
   }]
 }

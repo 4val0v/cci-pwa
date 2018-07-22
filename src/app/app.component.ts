@@ -17,6 +17,6 @@ export class AppComponent {
   ) { }
 
   refreshCurrencies() {
-    this.refresher.refreshCurrencyList().emit();
+    this.refresher.startRefresh();
   }
 }
